@@ -94,6 +94,7 @@ class AccountControllerWebTestClientTest {
                 .expectBody(Account.class)
                 .consumeWith(response -> {
                     Account account = response.getResponseBody();
+                    assertNotNull(account);
                     assertEquals("John", account.getPersonName());
                     assertEquals("2100.00", account.getBalance().toPlainString());
                 });
@@ -168,6 +169,7 @@ class AccountControllerWebTestClientTest {
                 .expectBody(Account.class)
                 .consumeWith(response -> {
                     Account account = response.getResponseBody();
+                    assertNotNull(account);
                     assertEquals(4L, account.getId());
                     assertEquals("Pepita", account.getPersonName());
                     assertEquals("3500", account.getBalance().toPlainString());

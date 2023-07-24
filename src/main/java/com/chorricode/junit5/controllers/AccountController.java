@@ -51,4 +51,10 @@ public class AccountController {
                 )
         );
     }
+
+    @DeleteMapping("/{accountId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long accountId) {
+        accountService.deleteById(accountId);
+    }
 }

@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class AccountControllerWebTestClientTest {
     @Autowired
-    private WebTestClient webTestClient;
+    protected WebTestClient webTestClient;
 
     private ObjectMapper objectMapper;
 
